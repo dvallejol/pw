@@ -1,0 +1,77 @@
+.body{
+    background-color: #ccc;
+}
+
+.contenedor{
+    height: 400px;
+    width: 400px;
+    perspective: 1000px;
+    margin: 1500px auto;
+    cursor: pointer;
+}
+
+.cont-hijo{
+    height: 300px;
+    width: 300px;
+    transform-style: preserve-3d;
+    animation: rotar 13s infinite linear;
+}
+
+.lado{
+    position: absolute;
+    transform-style: preserve-3d;
+    height: 100%;
+    width: 100%;
+}
+.box{
+    height: 100%;
+    width: 100%;
+    transition: 1.5s;
+    transform-origin: bottom;
+}
+.box img{
+  height: 100%;
+  width: 100%;
+}
+.frente{
+    transform: rotateY(0deg) translateZ(150px);
+}
+.derecho{
+    transform: rotateY(90deg) translateZ(150px);
+}
+.izquierdo{
+    transform: rotateY(-90deg) translateZ(150px);
+}
+.atras{
+    transform: rotateY(180deg) translateZ(150px);
+}
+.abajo{
+    transform: rotatex(90deg) translateZ(150px);
+    background-color: rgb(21, 201, 21);
+}
+.zombra{
+    transform: rotatex(-90deg) translateZ(230px);
+    background-color: #333;
+}
+.cont-hijo:hover .box{
+    transform: rotateX(-80deg);
+}
+
+@keyframes rotar{
+    0% {
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+}
+
+.kanguro{
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 73%;
+
+}
